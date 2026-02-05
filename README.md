@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎨 Modern Animated Portfolio Website
 
 > A stunning, production-ready personal portfolio featuring smooth Framer Motion animations, premium SaaS design, and fully responsive layouts.
@@ -426,3 +427,7 @@ Built with ❤️ using React, Next.js, Framer Motion, and Tailwind CSS
 *Last Updated: 2025*
 
 </div>
+=======
+# portfolio-website
+personal portfolio website
+>>>>>>> ae8509a28e2dd81bda0b083d2e1313fdad78d821
