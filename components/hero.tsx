@@ -1,0 +1,218 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
+
+const Hero = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  }
+
+  const slideVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: 'easeOut' },
+    },
+  }
+
+  return (
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+    >
+      {/* Animated background elements */}
+      <motion.div
+        className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
+        animate={{
+          x: [0, 50, 0],
+          y: [0, 30, 0],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"
+        animate={{
+          x: [0, -50, 0],
+          y: [0, -30, 0],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+      />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* Badge */}
+            <motion.div variants={itemVariants} className="mb-8">
+              <motion.div
+                className="inline-block px-4 py-2 rounded-full glass-effect"
+                whileHover={{ scale: 1.05 }}
+              >
+                <span className="text-sm font-medium">Welcome to my portfolio</span>
+              </motion.div>
+            </motion.div>
+
+            {/* Main Headline */}
+            <motion.h1
+              variants={slideVariants}
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight"
+            >
+              <span className="block mb-4">Creative Developer</span>
+              <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+                Building Digital Experiences
+              </span>
+            </motion.h1>
+
+            {/* Subheading */}
+            <motion.p
+              variants={itemVariants}
+              className="text-lg sm:text-xl text-muted-foreground mb-8"
+            >
+              I create stunning, modern web experiences with smooth animations and beautiful design.
+              Let's build something amazing together.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <motion.a
+                href="#projects"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold flex items-center gap-2 hover:bg-primary/90 transition-colors soft-shadow"
+              >
+                View My Work
+                <ArrowRight size={20} />
+              </motion.a>
+
+              <motion.a
+                href="#contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors"
+              >
+                Get In Touch
+              </motion.a>
+            </motion.div>
+
+          </motion.div>
+
+          {/* Hero Image Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            className="hidden lg:flex justify-center items-center"
+          >
+            <div className="relative">
+              {/* Animated background circle */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-2xl"
+                animate={{
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              />
+
+              {/* Image container */}
+              <motion.div
+                className="relative w-80 h-80 rounded-3xl overflow-hidden glass-effect soft-shadow-lg border border-primary/20"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src="/profile.jpg"
+                  alt="Profile Picture"
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Gradient overlay */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 0.5 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.div>
+
+              {/* Floating badge */}
+              <motion.div
+                className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold text-sm shadow-lg"
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                Let's Talk
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-20 flex justify-center"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 3, repeat: Infinity }}
+        >
+          <div className="flex flex-col items-center gap-2">
+            <span className="text-sm text-muted-foreground">Scroll to explore</span>
+            <svg
+              className="w-6 h-6 text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+export default Hero
