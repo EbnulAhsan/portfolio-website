@@ -33,7 +33,7 @@ const Projects = () => {
       image: '/grabgo.png',
       gradient: 'from-green-500/20 to-cyan-500/20',
       borderColor: 'border-green-500/30',
-      link: 'https://organic-products-gh3z.vercel.app/',
+      link: 'https://grabgo-frontend.vercel.app/',
     },
     // {
     //   id: 4,
