@@ -75,7 +75,7 @@ const Hero = () => {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -145,7 +145,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true }}
-            className="hidden lg:flex justify-center items-center"
+            className="flex justify-center items-center mt-12 lg:mt-0"
           >
             <div className="relative">
               {/* Animated background circle */}
@@ -163,7 +163,7 @@ const Hero = () => {
 
               {/* Image container */}
               <motion.div
-                className="relative w-80 h-80 rounded-3xl overflow-hidden glass-effect soft-shadow-lg border border-primary/20"
+                className="relative w-60 h-60 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-3xl overflow-hidden glass-effect soft-shadow-lg border border-primary/20"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -187,7 +187,7 @@ const Hero = () => {
                 onClick={handleFBClick}
                 role="button"
                 tabIndex={0}
-                className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold text-sm shadow-lg cursor-pointer"
+                className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-primary text-primary-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold text-xs sm:text-sm shadow-lg cursor-pointer"
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
