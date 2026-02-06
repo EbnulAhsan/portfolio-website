@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 
 const Hero = () => {
@@ -31,6 +32,15 @@ const Hero = () => {
       x: 0,
       transition: { duration: 0.8, ease: 'easeOut' },
     },
+  }
+
+  const [showFB, setShowFB] = useState(false)
+  const fbUrl = 'https://www.facebook.com/ebnul.aahsan'
+
+  const handleFBClick = () => {
+    window.open(fbUrl, '_blank')
+    setShowFB(true)
+    setTimeout(() => setShowFB(false), 3000)
   }
 
   return (
@@ -87,9 +97,9 @@ const Hero = () => {
               variants={slideVariants}
               className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight"
             >
-              <span className="block mb-4">Creative Developer</span>
+              <span className="block mb-4">Turning Ideas</span>
               <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-                Building Digital Experiences
+                Into Powerful Digital Experiences
               </span>
             </motion.h1>
 
@@ -158,8 +168,8 @@ const Hero = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="/profile.jpg"
-                  alt="Profile Picture"
+                  src="/ebnu.jpg"
+                  alt="Hero Image"
                   className="w-full h-full object-cover"
                 />
 
@@ -174,12 +184,21 @@ const Hero = () => {
 
               {/* Floating badge */}
               <motion.div
-                className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold text-sm shadow-lg"
+                onClick={handleFBClick}
+                role="button"
+                tabIndex={0}
+                className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold text-sm shadow-lg cursor-pointer"
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
                 Let's Talk
               </motion.div>
+
+              {showFB && (
+                <div className="absolute -bottom-20 -right-6 bg-background/90 text-sm px-3 py-2 rounded shadow-lg">
+                  Visit Facebook
+                </div>
+              )}
             </div>
           </motion.div>
         </div>

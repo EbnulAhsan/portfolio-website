@@ -13,11 +13,11 @@ const FAQ = () => {
       answer:
         'Timeline depends on project complexity. Small projects take 2-4 weeks, medium projects 1-3 months, and larger endeavors 3+ months. We always provide realistic estimates upfront.',
     },
-    {
-      question: 'Do you offer ongoing support after launch?',
-      answer:
-        'Yes! I provide post-launch support including bug fixes, performance optimization, and feature updates. We can discuss maintenance plans based on your needs.',
-    },
+    // {
+    //   question: 'Do you offer ongoing support after launch?',
+    //   answer:
+    //     'Yes! I provide post-launch support including bug fixes, performance optimization, and feature updates. We can discuss maintenance plans based on your needs.',
+    // },
     {
       question: 'What technologies do you specialize in?',
       answer:

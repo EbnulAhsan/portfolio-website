@@ -4,26 +4,26 @@ import { motion } from 'framer-motion'
 
 const Experience = () => {
   const experiences = [
-    {
+    /*{
       role: 'Senior Full-Stack Developer',
       company: 'Tech Innovations Inc',
       period: '2022 - Present',
       description:
         'Leading development of scalable web applications with modern tech stack. Mentoring junior developers and architecting system solutions.',
       highlights: ['React & Next.js', 'Team Leadership', 'AWS Architecture'],
-    },
-    {
+    },*/
+    /*{
       role: 'Full-Stack Developer',
       company: 'Digital Solutions Ltd',
       period: '2020 - 2022',
       description:
         'Developed and maintained multiple client projects. Improved performance and user experience. Collaborated with design and product teams.',
       highlights: ['Full-Stack Development', 'Database Design', 'API Integration'],
-    },
+    },*/
     {
-      role: 'Frontend Developer',
-      company: 'Creative Agency Co',
-      period: '2018 - 2020',
+      role: 'Jr.Frontend Developer',
+      company: 'SparkTech Agency',
+      period: '2026 - present',
       description:
         'Created responsive and interactive web interfaces. Implemented animations and complex UI components. Ensured cross-browser compatibility.',
       highlights: ['UI Development', 'Responsive Design', 'Performance Optimization'],
@@ -31,7 +31,7 @@ const Experience = () => {
     {
       role: 'Junior Web Developer',
       company: 'Startup Hub',
-      period: '2017 - 2018',
+      period: '2025 - 2026',
       description:
         'Assisted in building web applications using HTML, CSS, and JavaScript. Learned best practices in web development and collaboration.',
       highlights: ['Web Basics', 'Git & GitHub', 'Team Collaboration'],
@@ -96,7 +96,7 @@ const Experience = () => {
               {/* Timeline dot */}
               <motion.div
                 whileHover={{ scale: 1.3 }}
-                className="hidden md:block absolute left-0 top-8 w-24 h-24 flex items-center justify-center"
+                className="hidden md:flex absolute left-0 top-8 w-24 h-24 items-center justify-center"
               >
                 <div className="w-6 h-6 rounded-full bg-primary border-4 border-background soft-shadow" />
               </motion.div>
@@ -159,7 +159,7 @@ const Experience = () => {
           className="mt-16 p-8 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 text-center"
         >
           <p className="text-lg text-muted-foreground mb-4">
-            Over 5+ years of experience building digital products that users love
+            Building modern, user-focused digital experiences with passion and precision
           </p>
           <p className="text-sm text-primary font-semibold">
             Always learning, always growing 🚀

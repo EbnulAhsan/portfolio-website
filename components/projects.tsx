@@ -8,29 +8,32 @@ const Projects = () => {
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'Modern e-commerce solution with real-time inventory management',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      image: '/projects/ecommerce.jpg',
+      description: 'Organic product marketplace with clean design and easy, secure online shopping',
+      tags: ['React', 'Node.js', 'MongoDB', 'Typescript', 'Tailwind'],
+      image: '/organic.png',
       gradient: 'from-blue-500/20 to-purple-500/20',
       borderColor: 'border-blue-500/30',
+      link: 'https://organic-products-smoky.vercel.app/',
     },
     {
       id: 2,
-      title: 'SaaS Dashboard',
-      description: 'Analytics dashboard with real-time data visualization',
-      tags: ['Next.js', 'TypeScript', 'Tailwind'],
-      image: '/projects/dashboard.jpg',
+      title: 'DriveX RC',
+      description: 'A modern RC car shopping website for hobbyists, offering powerful models with an engaging user experience',
+      tags: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion', 'Typestripe'],
+      image: '/car.jpg',
       gradient: 'from-cyan-500/20 to-blue-500/20',
       borderColor: 'border-cyan-500/30',
+      link: 'https://rc-car-mocha.vercel.app/',
     },
     {
       id: 3,
-      title: 'AI Chat Application',
-      description: 'Intelligent chat interface with natural language processing',
-      tags: ['React', 'OpenAI', 'Express'],
-      image: '/projects/chat.jpg',
+      title: 'Grab-Go',
+      description: 'A food delivery platform connecting users with local restaurants, offering fast ordering and real-time tracking',
+      tags: ['React', 'Node.js', 'TypeScript', 'Tailwind', 'PostgreSQL'],
+      image: '/grabgo.png',
       gradient: 'from-green-500/20 to-cyan-500/20',
       borderColor: 'border-green-500/30',
+      link: 'https://organic-products-gh3z.vercel.app/',
     },
     // {
     //   id: 4,
@@ -142,13 +145,16 @@ const Projects = () => {
                   <h3 className="text-xl font-bold leading-tight flex-1">
                     {project.title}
                   </h3>
-                  <motion.div
+                  <motion.a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ x: 4, y: -4 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors"
+                    className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors cursor-pointer"
                   >
                     <ArrowUpRight size={20} className="text-primary" />
-                  </motion.div>
+                  </motion.a>
                 </div>
 
                 <p className="text-sm text-muted-foreground mb-6">

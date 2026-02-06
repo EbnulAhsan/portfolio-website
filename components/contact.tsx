@@ -15,11 +15,33 @@ const Contact = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  // const contactInfo = [
+  //   { icon: Mail, label: 'Email', value: 'ebnu1721@gmail.com', href: 'mailto:ebnu1721@gmail.com' },
+  //   { icon: Phone, label: 'Phone', value: '+8801303834841', href: 'tel:+8801303834841' },
+  //   { icon: MapPin, label: 'Location', value: 'Dhaka, Bangladesh', href: '#' },
+  // ]
+
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'hello@example.com', href: 'mailto:hello@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, label: 'Location', value: 'San Francisco, CA', href: '#' },
-  ]
+    {
+      icon: Mail,
+      label: 'Email',
+      value: 'ebnu1721@gmail.com',
+      href: 'mailto:ebnu1721@gmail.com?subject=Portfolio Inquiry'
+    },
+    {
+      icon: Phone,
+      label: 'Phone',
+      value: '+880 1303-834841',
+      href: 'tel:+8801303834841'
+    },
+    {
+      icon: MapPin,
+      label: 'Location',
+      value: 'Dhaka, Bangladesh',
+      href: 'https://www.google.com/maps/search/?api=1&query=Dhaka,Bangladesh'
+    },
+  ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -51,13 +73,32 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    const { name, email, subject, message } = formData
+
+    // Basic validation
+    if (!name || !email || !subject || !message) {
+      return
+    }
+
     setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    setIsSubmitting(false)
-    setFormData({ name: '', email: '', subject: '', message: '' })
+
+    const to = 'ebnu1721@gmail.com'
+    const subjectEncoded = encodeURIComponent(subject)
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`
+    const mailto = `mailto:${to}?subject=${subjectEncoded}&body=${encodeURIComponent(
+      body
+    )}`
+
+    // Open user's mail client
+    window.location.href = mailto
+
+    // Reset form after opening mail client
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setFormData({ name: '', email: '', subject: '', message: '' })
+    }, 500)
   }
 
   return (

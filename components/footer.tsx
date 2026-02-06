@@ -7,10 +7,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: Github, label: 'GitHub', href: 'https://github.com', color: 'hover:text-blue-500' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com', color: 'hover:text-blue-600' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/EbnulAhsan', color: 'hover:text-blue-500' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/ebnul-ahsan-582768363/', color: 'hover:text-blue-600' },
     { icon: Twitter, label: 'Twitter', href: 'https://twitter.com', color: 'hover:text-blue-400' },
-    { icon: Mail, label: 'Email', href: 'mailto:hello@example.com', color: 'hover:text-red-500' },
+    { icon: Mail, label: 'Email', href: 'mailto:ebnu1721@gmail.com', color: 'hover:text-red-500' },
   ]
 
   const quickLinks = [
@@ -123,7 +123,7 @@ const Footer = () => {
           className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground"
         >
           <p>
-            © {currentYear} Portfolio. All rights reserved.
+            © {currentYear} Portfolio. All rights reserved by Ebnul Ahsan.
           </p>
           <div className="flex items-center gap-6">
             <motion.a
