@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Download } from 'lucide-react'
 
 const Hero = () => {
   const containerVariants = {
@@ -82,14 +82,21 @@ const Hero = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {/* Badge */}
+            {/* Download Resume Button */}
             <motion.div variants={itemVariants} className="mb-8">
-              <motion.div
-                className="inline-block px-4 py-2 rounded-full glass-effect"
-                whileHover={{ scale: 1.05 }}
+              <motion.a
+                href="/resume.pdf"
+                download
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: '0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(236, 72, 153, 0.4)',
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium bg-gradient-to-r from-primary via-purple-500 to-pink-500 text-primary-foreground rounded-full hover:from-purple-600 hover:via-pink-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-2xl"
               >
-                <span className="text-sm font-medium">Welcome to my portfolio</span>
-              </motion.div>
+                <Download size={16} />
+                Download Resume
+              </motion.a>
             </motion.div>
 
             {/* Main Headline */}
