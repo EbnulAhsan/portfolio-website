@@ -85,7 +85,7 @@ const Hero = () => {
             {/* Download Resume Button */}
             <motion.div variants={itemVariants} className="mb-8">
               <motion.a
-                href="/resume.pdf"
+                href="Md Ebnul Ahsan Resume.pdf"
                 download
                 whileHover={{
                   scale: 1.1,
