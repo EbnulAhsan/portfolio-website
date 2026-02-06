@@ -95,11 +95,16 @@ const Hero = () => {
             {/* Main Headline */}
             <motion.h1
               variants={slideVariants}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance leading-tight"
+              className="mb-6 text-balance leading-tight"
             >
-              <span className="block mb-4">Turning Ideas</span>
-              <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-                Into Powerful Digital Experiences
+              <span className="block text-lg sm:text-xl font-medium text-muted-foreground mb-3">
+                Hello I am!
+              </span>
+              <span className="block text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+                Ebnul Ahsan
+              </span>
+              <span className="block text-2xl sm:text-3xl font-semibold text-primary">
+                Front-end Developer & Software Engineer
               </span>
             </motion.h1>
 
