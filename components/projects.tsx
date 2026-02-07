@@ -35,25 +35,27 @@ const Projects = () => {
       borderColor: 'border-green-500/30',
       link: 'https://grabgo-frontend.vercel.app/',
     },
-    // {
-    //   id: 4,
-    //   title: 'Mobile App Design',
-    //   description: 'Cross-platform mobile application with smooth animations',
-    //   tags: ['React Native', 'Firebase', 'UI/UX'],
-    //   image: '/projects/mobile.jpg',
-    //   gradient: 'from-purple-500/20 to-pink-500/20',
-    //   borderColor: 'border-purple-500/30',
-    //  have to add other projects later  
-    // },
-    // {
-    //   id: 5,
-    //   title: 'Portfolio Website',
-    //   description: 'Interactive portfolio showcasing creative projects',
-    //   tags: ['Next.js', 'Framer Motion', 'Tailwind'],
-    //   image: '/projects/portfolio.jpg',
-    //   gradient: 'from-orange-500/20 to-red-500/20',
-    //   borderColor: 'border-orange-500/30',
-    // },
+    {
+      id: 4,
+      title: 'QuickStay',
+      description: 'Hotel management system with smooth animations and responsive design for seamless booking and management',
+      tags: ['React Native', 'Firebase', 'UI/UX'],
+      image: '/countryside.jpg',
+      gradient: 'from-purple-500/20 to-pink-500/20',
+      borderColor: 'border-purple-500/30',
+      link: 'https://quickstay-website.netlify.app/',
+
+    },
+    {
+      id: 5,
+      title: 'Heart Disease Prediction System',
+      description: 'Built a Machine Learning–based Heart Disease Prediction system using clinical health data.',
+      tags: ['Python', 'TensorFlow', 'LR', 'KNN', 'SVM', 'Random Forest'],
+      image: '/heart.jpg',
+      gradient: 'from-orange-500/20 to-red-500/20',
+      borderColor: 'border-orange-500/30',
+      link: 'https://github.com/EbnulAhsan/Heart-Disease-Prediction-system'
+    },
     // {
     //   id: 6,
     //   title: 'Content Management System',
