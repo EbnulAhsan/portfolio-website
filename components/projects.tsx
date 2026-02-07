@@ -39,7 +39,7 @@ const Projects = () => {
       id: 4,
       title: 'QuickStay',
       description: 'Hotel management system with smooth animations and responsive design for seamless booking and management',
-      tags: ['React Native', 'Firebase', 'UI/UX'],
+      tags: ['React', 'Tailwind', 'UI/UX', 'Framer Motion', 'lucide'],
       image: '/countryside.jpg',
       gradient: 'from-purple-500/20 to-pink-500/20',
       borderColor: 'border-purple-500/30',
