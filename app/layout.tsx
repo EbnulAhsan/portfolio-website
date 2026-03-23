@@ -9,12 +9,12 @@ const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Modern Portfolio - Creative Full-Stack Developer',
+  title: 'Ebnul Ahsan Portfolio ',
   description: 'Stunning personal portfolio featuring modern web design, smooth Framer Motion animations, and premium SaaS-inspired aesthetics. Showcasing projects, skills, and experience.',
   keywords: 'portfolio, web developer, full-stack, React, Next.js, animations',
-  generator: 'v0.app',
+  generator: 'by Ebnul Ahsan',
   openGraph: {
-    title: 'Modern Portfolio - Creative Developer',
+    title: 'Ebnul Ahsan Portfolio',
     description: 'Stunning personal portfolio with smooth animations and modern design',
     type: 'website',
   },
