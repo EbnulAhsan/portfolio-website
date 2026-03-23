@@ -21,21 +21,21 @@ const Experience = () => {
       highlights: ['Full-Stack Development', 'Database Design', 'API Integration'],
     },*/
     {
-      role: 'Jr.Frontend Developer',
-      company: 'SparkTech Agency',
-      period: '2026 - present',
+      role: 'Jr.Frontend Developer (remote)',
+      company: 'Startup Hub ',
+      period: '01/2025 – 04/2025',
       description:
         'Created responsive and interactive web interfaces. Implemented animations and complex UI components. Ensured cross-browser compatibility.',
       highlights: ['UI Development', 'Responsive Design', 'Performance Optimization'],
     },
-    {
-      role: 'Junior Web Developer',
-      company: 'Startup Hub',
-      period: '2025 - 2026',
-      description:
-        'Assisted in building web applications using HTML, CSS, and JavaScript. Learned best practices in web development and collaboration.',
-      highlights: ['Web Basics', 'Git & GitHub', 'Team Collaboration'],
-    },
+    // {
+    //   role: 'Junior Web Developer',
+    //   company: 'Startup Hub',
+    //   period: '2025 - 2026',
+    //   description:
+    //     'Assisted in building web applications using HTML, CSS, and JavaScript. Learned best practices in web development and collaboration.',
+    //   highlights: ['Web Basics', 'Git & GitHub', 'Team Collaboration'],
+    // },
   ]
 
   const containerVariants = {
