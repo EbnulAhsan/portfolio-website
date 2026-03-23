@@ -23,7 +23,7 @@ const Experience = () => {
     {
       role: 'Jr.Frontend Developer (remote)',
       company: 'Startup Hub ',
-      period: '01/2025 – 04/2025',
+      period: '01/2025 – 02/2025',
       description:
         'Created responsive and interactive web interfaces. Implemented animations and complex UI components. Ensured cross-browser compatibility.',
       highlights: ['UI Development', 'Responsive Design', 'Performance Optimization'],
